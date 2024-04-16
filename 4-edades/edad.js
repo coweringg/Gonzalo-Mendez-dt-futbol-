@@ -16,3 +16,32 @@ Escriba un programa que:
 Tip: consulten los métodos de la clase Date
 https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date
 */
+
+// Función para calcular la edad
+function edad(fechaNacimientoStr) {
+  var fechaNacimiento = new Date(fechaNacimientoStr);
+  var fechaActual = new Date();
+  var edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+  
+  // Ajustar la edad si todavía no ha pasado su cumpleaños este año
+  if (fechaActual.getMonth() < fechaNacimiento.getMonth() || 
+      (fechaActual.getMonth() === fechaNacimiento.getMonth() && fechaActual.getDate() < fechaNacimiento.getDate())) {
+      edad--;
+  }
+  
+  return edad;
+}
+
+// Información del jugador más joven
+var jugadorMasJoven = {
+  nombre: "Luciano",
+  apellido: "Rodriguez",
+  apodo: "Lucho",
+  fechaNacimiento: "2003-07-16"
+};
+
+// Calcular la edad del jugador más joven
+var edadJugadorMasJoven = edad(jugadorMasJoven.fechaNacimiento);
+
+// Imprimir mensaje de presentación con la edad del jugador
+console.log(jugadorMasJoven.nombre + ' "' + jugadorMasJoven.apodo + '" ' + jugadorMasJoven.apellido + " (" + edadJugadorMasJoven + " años)");
