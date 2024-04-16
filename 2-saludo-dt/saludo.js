@@ -7,9 +7,7 @@ Escriba un programa que:
 - imprima en consola un mensaje saludando con el nombre usado.
 */
 
-// Solicitar el nombre del usuario
 var nombre = prompt("Por favor, introduce tu nombre:");
 
-// Mensaje de saludo personalizado
 console.log("¡Hola, " + nombre + "! Bienvenido al programa.");
 console.log("¡Comencemos!");

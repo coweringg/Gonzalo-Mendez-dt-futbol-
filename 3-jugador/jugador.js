@@ -10,12 +10,10 @@ Escriba un programa que:
 - imprima en consola un mensaje en el formato: {nombre} "{apodo}" {apellido} (notesé las comillas es parte de lo impreso).
 */
 
-// Información del jugador
 var jugador = {
     nombre: "Luciano",
     apellido: "Rodriguez",
     apodo: "Lucho"
 };
 
-// Imprimir mensaje de presentación
 console.log(jugador.nombre + ' "' + jugador.apodo + '" ' + jugador.apellido);
